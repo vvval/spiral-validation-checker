@@ -22,7 +22,6 @@ return [
      */
     'configureSequence' => [
         'views:compile' => ['options' => []],
-        /*{{sequence.configure}}*/
     ],
 
     /*
@@ -33,6 +32,5 @@ return [
     'updateSequence'    => [
         'odm:schema' => ['options' => []],
         'orm:schema' => ['options' => []],
-        /*{{sequence.update}}*/
     ]
 ];

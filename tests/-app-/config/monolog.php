@@ -23,7 +23,6 @@ return [
                 'bubble'         => false
             ],
         ],
-        /*{{handlers.debug}}*/
     ],
 
     /*
@@ -40,8 +39,5 @@ return [
                 'filename' => directory('runtime') . 'logs/http.log'
             ],
         ],
-        /*{{handlers.http}}*/
     ],
-
-    /*{{handlers}}*/
 ];

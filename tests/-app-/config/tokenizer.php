@@ -13,8 +13,6 @@ return [
     'directories' => [
         //Data entities
         directory('root') . '../../tests/-app-/classes/Database',
-
-        /*{{directories}}*/
     ],
     /*
      * Such paths are excluded from tokenization. You can use format compatible with Symfony Finder.
@@ -23,6 +21,5 @@ return [
         'config',
         'resources',
         'migrations',
-        /*{{exclude}}*/
     ]
 ];

@@ -53,6 +53,5 @@ return [
                 'cache' => bind(\Psr\SimpleCache\CacheInterface::class)
             ]
         ]
-        /*{{handlers}}*/
     ]
 ];

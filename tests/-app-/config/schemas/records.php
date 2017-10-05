@@ -14,10 +14,7 @@ return [
         'php:float'  => ['setter' => 'floatval', 'getter' => 'floatval'],
         'php:string' => ['setter' => 'strval'],
         'php:bool'   => ['setter' => 'boolval', 'getter' => 'boolval'],
-        /*{{mutators}}*/
     ],
     'aliases'  => [
-        // 'storage' => Accessors\StorageAccessor::class,
-        /*{{mutators.aliases}}*/
     ],
 ];

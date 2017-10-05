@@ -32,24 +32,4 @@ return [
         RelationsConfig::ACCESS_CLASS => Relations\HasManyRelation::class
 
     ],
-
-    //    RecordEntity::BELONGS_TO         => [
-//        'class'  => Entities\Relations\BelongsTo::class,
-//        'schema' => Entities\Schemas\Relations\BelongsToSchema::class,
-//        'loader' => Entities\Loaders\BelongsToLoader::class
-//    ],
-//    RecordEntity::BELONGS_TO_MORPHED => [
-//        'class'  => Entities\Relations\BelongsToMorphed::class,
-//        'schema' => Entities\Schemas\Relations\BelongsToMorphedSchema::class
-//    ],
-//    RecordEntity::MANY_TO_MANY       => [
-//        'class'  => Entities\Relations\ManyToMany::class,
-//        'schema' => Entities\Schemas\Relations\ManyToManySchema::class,
-//        'loader' => Entities\Loaders\ManyToManyLoader::class
-//    ],
-//    RecordEntity::MANY_TO_MORPHED    => [
-//        'class'  => Entities\Relations\ManyToMorphed::class,
-//        'schema' => Entities\Schemas\Relations\ManyToMorphedSchema::class
-//    ],
-    /*{{relations}}*/
 ];

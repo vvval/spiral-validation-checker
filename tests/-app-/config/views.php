@@ -28,7 +28,6 @@ return [
          */
         'default'  => [
             directory("application") . 'views/',
-            /*{{namespaces.default}}*/
         ],
         /*
          * This namespace contain few framework views like http error pages and exception view
@@ -37,12 +36,10 @@ return [
          */
         'spiral'   => [
             directory("libraries") . 'spiral/framework/source/views/',
-            /*{{namespaces.spiral}}*/
         ],
         'profiler' => [
             directory("root") . '../../source/views/',
         ],
-        /*{{namespaces}}*/
     ],
 
     /*
@@ -52,7 +49,6 @@ return [
     'environment' => [
         'language' => ['translator', 'getLocale'],
         'basePath' => ['http', 'basePath'],
-        /*{{environment}}*/
     ],
 
     /*
@@ -83,8 +79,6 @@ return [
 
                 //Mounts view environment variables using @{name} pattern.
                 Processors\EnvironmentProcessor::class,
-
-                /*{{twig.modifiers}}*/
             ],
 
             /*
@@ -94,7 +88,6 @@ return [
             'extensions' => [
                 //Provides access to dump() and spiral() functions inside twig templates
                 Engines\Twig\Extensions\SpiralExtension::class
-                /*{{twig.extension}}*/
             ]
         ],
         /*
@@ -128,8 +121,6 @@ return [
                 //such modifier used in spiral toolkit to simplify widget includes (see documentation
                 //and examples).
                 Processors\ExpressionsProcessors::class,
-
-                /*{{dark.modifiers}}*/
             ],
 
             /*
@@ -142,8 +133,6 @@ return [
 
                 //Drops empty lines and normalize attributes
                 Processors\PrettifyProcessor::class,
-
-                /*{{dark.processors}}*/
             ]
         ],
         /*
@@ -155,6 +144,5 @@ return [
             'class'     => Engines\NativeEngine::class,
             'extension' => 'php'
         ],
-        /*{{engines}}*/
     ]
 ];

@@ -28,7 +28,6 @@ return [
         'array::integer'   => ['accessor' => ODMAccessors\IntegerArray::class],
 
         'timestamp' => ['accessor' => Accessors\UTCMongoTimestamp::class],
-        /*{{mutators}}*/
     ],
     /*
      * Mutator aliases can be used to declare custom getter and setter filter methods.
@@ -52,8 +51,6 @@ return [
         'array::MongoId'                 => 'array::objectIDs',
         'array::ObjectID'                => 'array::objectIDs',
         'array::MongoDB\BSON\ObjectID'   => 'array::objectIDs'
-
-        /*{{mutators.aliases}}*/
     ]
 ];
 

@@ -31,7 +31,6 @@ return [
         'method' => Http\Configs\HttpConfig::COOKIE_ENCRYPT,
 
         'excluded' => [
-            /*{{cookies.excluded}}*/
         ]
     ],
 
@@ -50,7 +49,6 @@ return [
     'headers'      => [
         'Content-Type' => 'text/html; charset=UTF-8',
         'Generator'    => 'Spiral',
-        /*{{headers}}*/
     ],
 
     /*
@@ -73,7 +71,6 @@ return [
      */
     'middlewares'  => [
         Middlewares\ExceptionWrapper::class,
-        /*{{middlewares}}*/
     ],
 
     /*
@@ -86,6 +83,5 @@ return [
         403 => 'spiral:http/403',
         404 => 'spiral:http/404',
         500 => 'spiral:http/500',
-        /*{{errors}}*/
     ]
 ];

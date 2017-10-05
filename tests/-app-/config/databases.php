@@ -25,8 +25,6 @@ return [
      */
     'aliases'     => [
         'default'   => 'runtime',
-
-        /*{{aliases}}*/
     ],
 
     /*
@@ -42,7 +40,6 @@ return [
             'connection'  => 'runtime',
             'tablePrefix' => '',
         ],
-        /*{{databases}}*/
     ],
 
     /*
@@ -58,6 +55,5 @@ return [
             'password'   => '',
             'options'    => []
         ],
-        /*{{connections}}*/
     ]
 ];

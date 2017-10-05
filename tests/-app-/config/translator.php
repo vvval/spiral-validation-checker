@@ -30,27 +30,22 @@ return [
     'domains'          => [
         'validation' => [
             'spiral-validation-*',
-            /*{{domains.validation}}*/
         ],
         'spiral'     => [
             'spiral-*',
             'view-spiral-*',
-            /*{{domains.spiral}}*/
         ],
         'profiler'   => [
             'view-profiler-*',
-            /*{{domains.profiler}}*/
         ],
         'views'      => [
             'view-*',
-            /*{{domains.views}}*/
         ],
         'requests'   => [
             'requests-*'
         ],
         'external'   => ['external'],
         'messages'   => ['*'],
-        /*{{domains}}*/
     ],
 
     /*
@@ -68,7 +63,6 @@ return [
         'php' => Translation\Loader\PhpFileLoader::class,
         'csv' => Translation\Loader\CsvFileLoader::class,
         'po'  => Translation\Loader\PoFileLoader::class,
-        /*{{loaders}}*/
     ],
 
     /*
@@ -81,7 +75,6 @@ return [
         'xliff' => Translation\Dumper\XliffFileDumper::class,
         'php'   => Translation\Dumper\PhpFileDumper::class,
         'po'    => Translation\Dumper\PoFileDumper::class,
-        /*{{exporters}}*/
     ],
 
     /*

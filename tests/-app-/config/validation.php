@@ -23,7 +23,6 @@ return [
         "file::exists",
         "file::uploaded",
         "image:valid"
-        /*{{empties}}*/
     ],
 
     /*
@@ -40,7 +39,6 @@ return [
         "string"   => Checkers\StringChecker::class,
         "file"     => Checkers\FileChecker::class,
         "image"    => Checkers\ImageChecker::class,
-        /*{{checkers}}*/
     ],
 
     /*
@@ -76,6 +74,5 @@ return [
         "scalar"     => "is_scalar",
         "string"     => "is_string",
         "match"      => "mixed::match",
-        /*{{aliases}}*/
     ]
 ];

@@ -35,6 +35,5 @@ return [
             'database' => 'spiral-empty',
             'options'  => ['connect' => true]
         ],
-        /*{{databases}}*/
     ]
 ];
