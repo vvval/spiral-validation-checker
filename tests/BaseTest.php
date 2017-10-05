@@ -14,7 +14,8 @@ use Spiral\Translator\TranslatorInterface;
 use Spiral\Validation\CheckerInterface;
 use Spiral\Validation\Configs\ValidatorConfig;
 use Spiral\Validation\Validator;
-use Spiral\Validation\ValidatorInterface;
+use Vvval\Spiral\Validation\Checkers\EntityChecker;
+use Vvval\Spiral\Validation\Checkers\FieldsChecker;
 use Vvval\Spiral\Validation\Checkers\RegistryChecker;
 
 /**
@@ -189,6 +190,8 @@ abstract class BaseTest extends TestCase
              */
             'checkers'        => [
                 "registry" => RegistryChecker::class,
+                "entity"   => EntityChecker::class,
+                "fields"   => FieldsChecker::class,
                 /*{{checkers}}*/
             ],
             /*

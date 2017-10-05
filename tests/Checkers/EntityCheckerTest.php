@@ -4,7 +4,6 @@ namespace Vvval\Spiral\Validation\Tests\Checkers;
 
 use TestApplication\Database\Sources\TestSource;
 use TestApplication\Database\TestRecord;
-use Vvval\Spiral\Validation\Checkers\EntityChecker;
 use Vvval\Spiral\Validation\Tests\BaseTest;
 
 class EntityCheckerTest extends BaseTest
@@ -13,7 +12,7 @@ class EntityCheckerTest extends BaseTest
     {
         $rules = [
             'field' => [
-                [EntityChecker::class . '::isUnique', TestSource::class, 'field']
+                ['entity::isUnique', TestSource::class, 'field']
             ],
         ];
         $validator = $this->createValidator($rules);

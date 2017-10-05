@@ -2,7 +2,6 @@
 
 namespace Vvval\Spiral\Validation\Tests\Checkers;
 
-use Vvval\Spiral\Validation\Checkers\FieldsChecker;
 use Vvval\Spiral\Validation\Tests\BaseTest;
 
 class FieldsCheckerTest extends BaseTest
@@ -11,7 +10,7 @@ class FieldsCheckerTest extends BaseTest
     {
         $rules = [
             'field2' => [
-                [FieldsChecker::class . '::equalsTo', 'field1']
+                ['fields::equalsTo', 'field1']
             ],
         ];
         $validator = $this->createValidator($rules);

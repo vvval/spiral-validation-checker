@@ -2,10 +2,8 @@
 
 namespace Vvval\Spiral\Validation\Tests\Checkers;
 
-use Spiral\ORM\Entities\RecordSource;
 use TestApplication\Database\Sources\TestSource;
 use TestApplication\Database\TestRecord;
-use Vvval\Spiral\Validation\Checkers\RegistryChecker;
 use Vvval\Spiral\Validation\Tests\BaseTest;
 
 class RegistryCheckerTest extends BaseTest
@@ -46,7 +44,7 @@ class RegistryCheckerTest extends BaseTest
 
         $rules = [
             'field' => [
-                [RegistryChecker::class . '::allowedValues', TestSource::class, 'field']
+                ['registry::allowedValues', TestSource::class, 'field']
             ],
         ];
         $validator = $this->createValidator($rules);
@@ -66,15 +64,12 @@ class RegistryCheckerTest extends BaseTest
         //mixed
         $validator->setData(['field' => ['a', 'aa']]);
         $this->assertFalse($validator->isValid(), 'Validation PASSED');
-
-        return;
-
-
-        $this->assertTrue($validator->isValid(), 'Validation FAILED');
-        $this->assertFalse($validator->isValid(), 'Validation PASSED');
-
     }
 
+    /**
+     * @param TestSource $source
+     * @param array      $input
+     */
     protected function fill(TestSource $source, array $input)
     {
         foreach (array_unique($input) as $value) {
