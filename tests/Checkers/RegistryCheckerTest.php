@@ -25,14 +25,14 @@ class RegistryCheckerTest extends BaseTest
 
         //nothing passed or null passed
         $validator->setData([]);
-        $this->assertFalse($validator->isValid(), 'Validation PASSED');
+        $this->assertFalse($validator->isValid(), 'Validation PASSED1');
 
         $validator->setData(['field' => null]);
-        $this->assertFalse($validator->isValid(), 'Validation PASSED');
+        $this->assertFalse($validator->isValid(), 'Validation PASSED2');
 
         //not null value
         $validator->setData(['field' => false]);
-        $this->assertTrue($validator->isValid(), 'Validation FAILED');
+        $this->assertTrue($validator->isValid(), 'Validation FAILED3');
 
         return;
     }
@@ -51,19 +51,19 @@ class RegistryCheckerTest extends BaseTest
 
         //nothing is allowed
         $validator->setData([]);
-        $this->assertTrue($validator->isValid(), 'Validation FAILED');
+        $this->assertTrue($validator->isValid(), 'Validation FAILED4');
 
         //in array
         $validator->setData(['field' => ['a']]);
-        $this->assertTrue($validator->isValid(), 'Validation FAILED');
+        $this->assertTrue($validator->isValid(), 'Validation FAILED5');
 
         //not in array
         $validator->setData(['field' => ['aa']]);
-        $this->assertFalse($validator->isValid(), 'Validation PASSED');
+        $this->assertFalse($validator->isValid(), 'Validation PASSED6');
 
         //mixed
         $validator->setData(['field' => ['a', 'aa']]);
-        $this->assertFalse($validator->isValid(), 'Validation PASSED');
+        $this->assertFalse($validator->isValid(), 'Validation PASSED7');
     }
 
     /**
