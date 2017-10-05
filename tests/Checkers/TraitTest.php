@@ -39,6 +39,9 @@ class TraitTest extends BaseTest
      */
     public function provider()
     {
-        return [__METHOD__, 'test-method'];
+        return [
+            [__METHOD__],
+            ['test-method']
+        ];
     }
 }
