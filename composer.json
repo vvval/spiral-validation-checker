@@ -24,7 +24,8 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Vvval\\Spiral\\Validation\\Tests\\": "tests/"
+      "Vvval\\Spiral\\Validation\\Tests\\": "tests/",
+      "TestApplication\\": "tests/-app-/classes/"
     }
   }
 }
