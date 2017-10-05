@@ -7,23 +7,38 @@ use Vvval\Spiral\Validation\Tests\Checkers\Fixtures\TraitedFixture;
 
 class TraitTest extends BaseTest
 {
-    public function testTraitMethods()
+    /**
+     * @dataProvider provider
+     *
+     * @param string $method
+     */
+    public function testTraitMethods(string $method)
     {
         $fixture = new TraitedFixture();
 
         $defaultMessage = $fixture->getMessage('');
         $this->assertNotEmpty($defaultMessage);
 
-        $emptyMessage = $fixture->call(null, __METHOD__);
-        $this->assertNotEmpty($emptyMessage);
-        $this->assertSame($defaultMessage, $emptyMessage);
+        //no custom message
+        $missingMessage = $fixture->call(null, $method);
+        $this->assertNotEmpty($missingMessage);
+        $this->assertSame($defaultMessage, $missingMessage);
 
-        $emptyStringMessage = $fixture->call('', __METHOD__);
+        //custom message is empty string (is set, so it exists)
+        $emptyStringMessage = $fixture->call('', $method);
         $this->assertNotSame($defaultMessage, $emptyStringMessage);
         $this->assertEquals('', $emptyStringMessage);
 
-        $notEmptyMessage = $fixture->call('test-message', 'method');
+        $notEmptyMessage = $fixture->call('test-message', $method);
         $this->assertNotEmpty($notEmptyMessage);
         $this->assertSame('test-message', $notEmptyMessage);
+    }
+
+    /**
+     * @return array
+     */
+    public function provider()
+    {
+        return [__METHOD__, 'test-method'];
     }
 }

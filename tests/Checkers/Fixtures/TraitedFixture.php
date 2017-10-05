@@ -8,7 +8,7 @@ class TraitedFixture
 {
     use CustomMessagesTrait;
 
-    const MESSAGES = 'trait message';
+    const MESSAGE = 'trait message';
 
     /**
      * @param string $method
@@ -17,7 +17,7 @@ class TraitedFixture
      */
     public function getMessage(string $method): string
     {
-        return self::MESSAGES;
+        return self::MESSAGE;
     }
 
     /**
