@@ -146,16 +146,6 @@ abstract class BaseTest extends TestCase
     }
 
     /**
-     * @param string $name
-     *
-     * @return CheckerInterface
-     */
-    protected function createChecker(string $name): CheckerInterface
-    {
-        return new $name(new Container());
-    }
-
-    /**
      * @param array $rules
      * @param array $data
      *

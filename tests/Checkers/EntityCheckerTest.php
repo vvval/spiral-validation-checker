@@ -8,6 +8,15 @@ use Vvval\Spiral\Validation\Tests\BaseTest;
 
 class EntityCheckerTest extends BaseTest
 {
+    public function setUp()
+    {
+        parent::setUp();
+
+        foreach ($this->orm->source(TestRecord::class)->find() as $record) {
+            $record->delete();
+        }
+    }
+
     public function testIsUnique()
     {
         $rules = [
