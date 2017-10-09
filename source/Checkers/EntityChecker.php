@@ -17,6 +17,8 @@ class EntityChecker extends AbstractChecker
     ];
 
     /**
+     * Check if current value is unique.
+     *
      * @param mixed  $value
      * @param string $sourceClass
      * @param string $field

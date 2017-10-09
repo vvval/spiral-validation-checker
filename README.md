@@ -7,3 +7,8 @@ Collection of useful validation checkers
 [![Coverage Status](https://coveralls.io/repos/github/vvval/spiral-validation-checkers/badge.svg)](https://coveralls.io/github/vvval/spiral-validation-checkers)
 [![Build Status](https://travis-ci.org/vvval/spiral-validation-checkers.svg?branch=master)](https://travis-ci.org/vvval/spiral-validation-checkers)
 
+## Checkers inside
+Here's list of available checkers:
+  * [Entity checker](docs/entity-checker.md)
+  * [Fields checker](docs/fields-checker.md)
+  * [Registry checker](docs/registry-checker.md)

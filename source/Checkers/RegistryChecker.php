@@ -15,8 +15,8 @@ class RegistryChecker extends AbstractChecker
      * {@inheritdoc}
      */
     const MESSAGES = [
-        'anyValue'      => '[[This value is required]]',
-        'allowedValues' => '[[This value is not allowed]]'
+        'anyValue'      => '[[This value is required.]]',
+        'allowedValues' => '[[This value is not allowed.]]'
     ];
 
     /**
