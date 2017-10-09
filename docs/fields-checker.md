@@ -6,8 +6,8 @@ Checks equality between given value and another field's value.
 class UserRequest extends RequestFilter
 {
     const SCHEMA = [
-        'password'        => 'data:ppassword',
-        'confitmPassword' => 'data:ppassword',
+        'password'        => 'data:password',
+        'confirmPassword' => 'data:password',
     ];
 
     const VALIDATES = [        
